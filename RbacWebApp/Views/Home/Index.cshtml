@@ -1,0 +1,14 @@
+@model IEnumerable<RbacWebApp.Models.MenuItem>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Welcome</h1>
+<p>Select a menu item:</p>
+<ul>
+@foreach (var item in Model)
+{
+    <li><a href="@item.Url">@item.Title</a></li>
+}
+</ul>
